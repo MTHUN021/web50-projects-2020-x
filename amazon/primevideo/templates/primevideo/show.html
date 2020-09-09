@@ -1,0 +1,10 @@
+{% extends "primevideo/layout.html" %}
+
+{% block body %}
+<h1>List of Users</h1>
+<ol>
+    {% for user in users %}
+    <li>{{ user }}</li>
+    {% endfor %}
+</ol>
+{% endblock %}

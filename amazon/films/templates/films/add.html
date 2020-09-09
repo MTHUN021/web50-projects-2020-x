@@ -1,0 +1,12 @@
+{% extends "films/layout.html" %}
+
+{% block body %}
+<h1>Enter the movie!</h1>
+<form action="{% url 'films:adding' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit">
+</form>
+    <h2>To see list of Movies</h2>
+    <a href="{% url 'films:index'  %}">Click here</a>
+{% endblock %}

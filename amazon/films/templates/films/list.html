@@ -1,0 +1,14 @@
+{% extends "films/layout.html "%}
+
+{% block body %}
+<h1>List of Films</h1>
+<ul>
+    {% for movie in movies %}
+    <li>{{ movie }}</li>
+    {% empty %}
+        <li>No Movies</li>
+    {% endfor %}
+</ul>
+<h3>To add Movies</h3>
+<a href="{% url 'films:adding' %}">Click Here</a>
+{% endblock %}
