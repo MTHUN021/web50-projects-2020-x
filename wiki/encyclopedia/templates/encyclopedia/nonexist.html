@@ -1,0 +1,12 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ Title }} not found!!!
+{% endblock %}
+
+{% block body %}
+
+    <h1> Content Not Found for {{ Title }}</h1>
+    <a href="{% url 'newentry' %}" role="button">Click here to add</a>
+
+{% endblock %}
